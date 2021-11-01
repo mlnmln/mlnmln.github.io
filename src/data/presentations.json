@@ -1,0 +1,26 @@
+[
+  {
+    "url": "https://workingdraft.de/464/",
+    "title": "Revision 464: TailwindCSS 2.0",
+    "description": "I'm talking with @ddprrt, @derSchepp and @vannsl about the 2.0 release of the utility-first CSS framework.",
+    "location": "Working Draft Podcast"
+  },
+  {
+    "url": "https://docs.google.com/presentation/d/16AwHOSYdHSSHo2639_LBf37upnTT53_CmljQyWbdE7c/edit?usp=sharing",
+    "title": "Overcoming Technology Bias",
+    "description": "or: How I Learned to Stop Worrying and Love the Tailwind",
+    "location": "Vue.js Meetup Hamburg @ Factorial"
+  },
+  {
+    "url": "https://docs.google.com/presentation/d/1sTqsS1BKOPLF2GEb_4nCVi-MlVBZziWdoad6YgleE2E/edit?usp=sharing",
+    "title": "Prerendering Vue.js Applications",
+    "description": "Using Drupal, GraphQL and Nuxt.js",
+    "location": "Vue.js Barcamp @ Berlin, Vue.js Meetup Hamburg @ YooTheme"
+  },
+  {
+    "url": "https://docs.google.com/presentation/d/1WOfz5PHWhTblNIwywadkef_bF-d1TMzs8Zu1WJ2gaQc/edit?usp=sharing",
+    "title": "Hello Vue Components",
+    "description": "Using Drupal, GraphQL and Nuxt.js",
+    "location": "Vue.js Meetup Hamburg @ gruner + jahr, Vue.js Barcamp Berlin"
+  }
+]

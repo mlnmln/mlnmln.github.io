@@ -1,0 +1,17 @@
+{
+  "name": "milanmatull",
+  "private": true,
+  "scripts": {
+    "develop": "gridsome develop",
+    "explore": "gridsome explore",
+    "build": "gridsome build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "gh-pages": "^3.2.3",
+    "gridsome": "^0.7.0"
+  },
+  "author": "Milan Matull <inbox@milanmatull.com>",
+  "license": "UNLICENSED"
+}
