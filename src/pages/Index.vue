@@ -51,7 +51,9 @@
                 <a href="https://twitter.com/mlnmln">twitter.com/mlnmln</a>
                 <br />
                 <a href="https://github.com/mlnmln">github.com/mlnmln</a> <br />
-                <a href="mailto:inbox@milanmatull.com">inbox@milanmatull.com</a>
+                <a href="mailto:inbox.milan@mailbox.org"
+                  >inbox.milan@mailbox.org</a
+                >
               </small>
             </address>
           </div>
