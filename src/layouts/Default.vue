@@ -177,6 +177,7 @@ html {
   .Header {
     background-color: #111;
     color: #eee;
+    border-bottom: 1px solid #333;
   }
 
   h2 {
