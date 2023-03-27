@@ -37,7 +37,7 @@
             </p>
 
             <card
-              v-for="edge in $page.presentations.edges"
+              v-for="edge in $page.presentations.edges.reverse()"
               v-bind="edge.node"
               :key="edge.node.id"
             ></card>
