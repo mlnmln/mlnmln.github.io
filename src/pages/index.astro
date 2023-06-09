@@ -1,0 +1,112 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+
+import engagements from "../data/engagements.json";
+import presentations from "../data/presentations.json";
+
+function formatEngagements(items: any[]) {
+  function formatClients(clients: string[]) {
+    return clients.join(", ");
+  }
+
+  function formatLocation({
+    company,
+    role,
+    startDate,
+    endDate,
+  }: {
+    company: string;
+    role: string;
+    startDate: string;
+    endDate: string;
+  }) {
+    return `${company ? company + ", " : ""}${
+      role ? role + ", " : ""
+    } ${startDate} - ${endDate}`;
+  }
+
+  return items.reverse().map((item) => ({
+    title: item.title,
+    description: formatClients(item.clients),
+    location: formatLocation(item),
+  }));
+}
+---
+
+<Layout title="Milan Matull, Technologist">
+  <div>
+    <div>
+      <main class="Text">
+        <div>
+          <h2>About</h2>
+
+          <p>
+            I work in web technology since the early 2000s, ranging from visual
+            design to software architecture. I currently build web applications
+            and facilitate the creative process at
+            <a href="https://factorial.io">Factorial</a>.
+          </p>
+        </div>
+
+        <div>
+          <h2>Engagements</h2>
+          {
+            formatEngagements(engagements).map((item) => (
+              <Card
+                title={item.title}
+                description={item.description}
+                location={item.location}
+              />
+            ))
+          }
+        </div>
+
+        <div>
+          <h2>Speaking</h2>
+          <p>I speak occasionally at company events, meetups, barcamps etc.</p>
+
+          {
+            presentations.map((item) => (
+              <Card
+                title={item.title}
+                description={item.description}
+                location={item.location}
+                url={item.url}
+              />
+            ))
+          }
+        </div>
+
+        <div>
+          <h2>Contact</h2>
+
+          <address>
+            <small>
+              <a href="https://twitter.com/mlnmln">twitter.com/mlnmln</a>
+              <br />
+              <a href="https://github.com/mlnmln">github.com/mlnmln</a>
+              <br />
+              <a href="mailto:inbox.milan@mailbox.org"
+                >inbox.milan@mailbox.org</a
+              >
+            </small>
+          </address>
+        </div>
+
+        <div>
+          <h2>Imprint</h2>
+
+          <address>
+            <small>
+              Milan Matull<br />
+              c/o Factorial GmbH<br />
+              Kirchentwiete 37-39<br />
+              22765 Hamburg<br />
+            </small>
+          </address>
+        </div>
+      </main>
+    </div>
+  </div>
+</Layout>
