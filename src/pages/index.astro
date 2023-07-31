@@ -39,7 +39,7 @@ function formatEngagements(items: any[]) {
     <div>
       <main class="Text">
         <div>
-          <h2>About</h2>
+          <h2 id="about">About</h2>
 
           <p>
             I work in web technology since the early 2000s, ranging from visual
@@ -50,7 +50,7 @@ function formatEngagements(items: any[]) {
         </div>
 
         <div>
-          <h2>Engagements</h2>
+          <h2 id="engagements">Engagements</h2>
           {
             formatEngagements(engagements).map((item) => (
               <Card
@@ -63,7 +63,7 @@ function formatEngagements(items: any[]) {
         </div>
 
         <div>
-          <h2>Speaking</h2>
+          <h2 id="speaking">Speaking</h2>
           <p>I speak occasionally at company events, meetups, barcamps etc.</p>
 
           {
@@ -79,7 +79,7 @@ function formatEngagements(items: any[]) {
         </div>
 
         <div>
-          <h2>Contact</h2>
+          <h2 id="contact">Contact</h2>
 
           <address>
             <small>
