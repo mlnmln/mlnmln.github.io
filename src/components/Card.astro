@@ -17,3 +17,28 @@ const { url, title, description, location } = Astro.props;
     <span class="Text-location">{location}</span>
   </small>
 </p>
+<style>
+  .Card {
+    --Card-shadow-offset: 1px;
+    --Card-shadow-blur: 0;
+    --Card-shadow-color: rgba(0, 0, 0, 0.1);
+    --Card-background-color: #fff;
+
+    background-color: var(--Card-background-color);
+    padding: 0.7rem;
+    border-radius: 1px;
+    box-shadow: var(--Card-shadow-color) 0 var(--Card-shadow-offset)
+      var(--Card-shadow-blur);
+    transition: box-shadow 250ms ease;
+  }
+
+  .Card:hover {
+    --Card-shadow-offset: 2px;
+    --Card-shadow-blur: 4px;
+  }
+  @media (prefers-color-scheme: dark) {
+    .Card {
+      --Card-background-color: #222;
+    }
+  }
+</style>
