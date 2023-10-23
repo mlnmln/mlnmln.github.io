@@ -7,7 +7,7 @@ const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="leading-snug text-gray-900 bg-gray-50">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
@@ -17,12 +17,14 @@ const { title } = Astro.props;
   </head>
   <body>
     <div class="layout AutoPro-Regular">
-      <header class="Header">
-        <div class="Header-logo Logo">
-          <div class="Logo-wrapper">
+      <header
+        class="Header px-4 py-2 border-b flex items-center justify-between flex-wrap gap-4"
+      >
+        <div class="text-[16px]">
+          <div class="flex items-center">
             <div>
               <img
-                class="Logo-img"
+                class="rounded-full mr-2 block w-[44px]"
                 src="/images/milan@1x.jpg"
                 srcset="/images/milan@1x.jpg, /images/milan@2x.jpg 2x"
                 width="44"
@@ -30,16 +32,15 @@ const { title } = Astro.props;
               />
             </div>
             <div>
-              <div class="Logo-name">Milan&nbsp;Matull</div>
-              <!-- <div class="Logo-title">Technologist</div> -->
+              <div>Milan&nbsp;Matull</div>
             </div>
           </div>
         </div>
-        <ul class="Header-nav">
-          <li class="Header-navItem"><a href="#about">About</a></li>
-          <li class="Header-navItem"><a href="#engagements">Engagements</a></li>
-          <li class="Header-navItem"><a href="#speaking">Speaking</a></li>
-          <li class="Header-navItem"><a href="#contact">Contact</a></li>
+        <ul class="Header-nav flex flex-wrap gap-x-4 text-[16px]">
+          <li><a href="#about">About</a></li>
+          <li><a href="#engagements">Engagements</a></li>
+          <li><a href="#speaking">Speaking</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </header>
       <slot />
@@ -102,53 +103,6 @@ const { title } = Astro.props;
 
   html {
     font-size: calc(18px + (27 - 18) * ((100vw - 320px) / (1440 - 320)));
-    line-height: 1.4;
-    color: #111;
-    background-color: #f5f5f5;
-  }
-
-  .Header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    border-bottom: 1px solid #ddd;
-    padding: 0.5rem 1rem;
-    gap: 1rem;
-  }
-
-  .Header-nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0 1rem;
-    list-style: none;
-    padding: 0;
-  }
-
-  .Header-navItem {
-    font-size: 16px;
-  }
-
-  .Logo {
-    font-size: 16px;
-    line-height: 1.4;
-    text-align: left;
-  }
-
-  .Logo > * {
-    display: block;
-  }
-
-  .Logo-wrapper {
-    display: flex;
-    align-items: center;
-  }
-
-  .Logo-img {
-    border-radius: 50%;
-    margin-right: 0.5em;
-    width: 44px;
-    display: block;
   }
 
   .Text {
