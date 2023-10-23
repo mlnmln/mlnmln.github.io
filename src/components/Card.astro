@@ -10,7 +10,7 @@ const { url, title, description, location } = Astro.props;
 ---
 
 <p class="Card">
-  {url ? <a href={url}>{title}</a> : title}
+  {url ? <a class="font-medium" href={url}>{title}</a> : title}
   <br />
   <small
     >{description}<br />
