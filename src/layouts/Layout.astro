@@ -96,32 +96,10 @@ const { title } = Astro.props;
   small {
     font-size: 0.8em;
   }
-  .Text {
-    max-width: 48ch;
-    margin: calc(64px + 1.7rem) auto;
-    padding: 0 calc(18px + (27 - 18) * ((100vw - 320px) / (1440 - 320)));
-  }
-
-  .Text p:first-of-type {
-    opacity: 1;
-    font-size: 1em;
-    line-height: 1.4;
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  .Text p {
-    font-size: 0.9em;
-    color: rgba(0, 0, 0, 0.8);
-  }
 
   @media (prefers-color-scheme: dark) {
     h2 {
       color: rgba(255, 255, 255, 0.6);
-    }
-
-    .Text p {
-      color: rgba(240, 240, 240, 0.8);
     }
   }
 </style>
