@@ -1,6 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
+import Intro from "../components/Intro.astro";
+
 
 import engagements from "../data/engagements.json";
 import presentations from "../data/presentations.json";
@@ -58,19 +60,19 @@ function formatEngagements(items: any[]) {
       <main class="Text">
         <div>
           <h2 id="about">About</h2>
-
-          <p>
+          <Intro>
             I work in web technology since the early 2000s, ranging from visual
             design to software architecture. I currently build web applications
             and facilitate the creative process at
             <a href="https://factorial.io">Factorial</a>.
-          </p>
+          </Intro>
         </div>
 
         <div>
           <h2 id="speaking">Speaking</h2>
-          <p>I speak occasionally at company events, meetups, barcamps etc.</p>
-
+          <Intro>
+            I speak occasionally at company events, meetups, barcamps etc.
+          </Intro>
           {
             presentations.map((item) => (
               <Card
@@ -133,14 +135,6 @@ function formatEngagements(items: any[]) {
     max-width: 48ch;
     margin: calc(64px + 1.7rem) auto;
     padding: 0 calc(18px + (27 - 18) * ((100vw - 320px) / (1440 - 320)));
-  }
-
-  .Text p:first-of-type {
-    opacity: 1;
-    font-size: 1em;
-    line-height: 1.4;
-    margin-left: 0;
-    margin-right: 0;
   }
 
   .Text p {
