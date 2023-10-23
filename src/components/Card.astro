@@ -21,7 +21,7 @@ const { url, title, description, location } = Astro.props;
   .Card {
     border-radius: 1px;
     padding: 0.7rem;
-    background-color: var(--Card-background-color, #fff);
+    background-color: var(--Card-background-color, theme("colors.white"));
     box-shadow: var(--Card-shadow-color, rgba(0, 0, 0, 0.1)) 0
       var(--Card-shadow-offset, 1px) var(--Card-shadow-blur, 0);
     transition: box-shadow 250ms ease;
@@ -33,7 +33,7 @@ const { url, title, description, location } = Astro.props;
   }
   @media (prefers-color-scheme: dark) {
     .Card {
-      --Card-background-color: #222;
+      --Card-background-color: theme("colors.gray.900");
     }
   }
 </style>
