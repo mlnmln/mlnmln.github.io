@@ -53,21 +53,37 @@ function formatEngagements(items: any[]) {
 }
 ---
 
-<Layout title="Milan Matull, Technologist">
+<Layout title="Milan Matull, Design Engineering Consultant">
   <div>
     <div>
       <main class="Text">
         <div>
-          <h2 id="about">About</h2>
-          <Intro>
-            I work in web technology since the early 2000s, ranging from visual
-            design to software architecture. I am managing partner at
-            <a href="https://factorial.io">Factorial</a>.
-          </Intro>
+          <Intro>I help organizations build better digital products.</Intro>
         </div>
 
-        <div>
-          <h2 id="speaking">Speaking</h2>
+        <div id="engagements">
+          <p>
+            As a designer, developer and founder with a strategic mindset and
+            in-depth expertise in digital product development, I have led
+            cross-functional teams, built sustainable organisational structures
+            and driven high-quality outcomes for complex client projects.
+          </p>
+          {
+            formatEngagements(engagements).map((item) => (
+              <Card
+                title={item.title}
+                description={item.description}
+                location={item.location}
+              />
+            ))
+          }
+        </div>
+
+        <div id="speaking">
+          <p>
+            I occasionally give talks at conferences and company events, and I
+            am a guest on podcasts.
+          </p>
           {
             presentations.map((item) => (
               <Card
@@ -75,19 +91,6 @@ function formatEngagements(items: any[]) {
                 description={item.description}
                 location={item.location}
                 url={item.url}
-              />
-            ))
-          }
-        </div>
-
-        <div>
-          <h2 id="engagements">Engagements</h2>
-          {
-            formatEngagements(engagements).map((item) => (
-              <Card
-                title={item.title}
-                description={item.description}
-                location={item.location}
               />
             ))
           }
@@ -116,8 +119,8 @@ function formatEngagements(items: any[]) {
             <small>
               Milan Matull<br />
               c/o Factorial GmbH<br />
-              Kirchentwiete 37-39<br />
-              22765 Hamburg<br />
+              Langenfelder Straße 93<br />
+              22769 Hamburg<br />
             </small>
           </address>
         </div>
